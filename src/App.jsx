@@ -1,11 +1,10 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Login from "./components/Login/loginPage";
-import Register from "./components/Register/registerPage";
-import Sidebar from "./components/Sidebar/Sidebar";
-import MainContent from "./components/Sidebar/MainContent";
-
+import Login from "./pages/Auth/loginPage";
+import Register from "./pages/Auth/registerPage";
+import Header from "./pages/Dashboard/Content/Header";
+import Sidebar from "./pages/Dashboard/Sidebar";
+import Table from "./pages/Dashboard/Content/Table";
 
 const App = () => {
   return (
@@ -13,16 +12,48 @@ const App = () => {
       <div>
         <Router>
           <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-          </Routes>
-          <Routes>
-            <Route path="/sidebar" element={<Sidebar />} />
+            <Route
+              index
+              element={
+                <>
+                  <Login />
+                </>
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <>
+                  <Register />
+                </>
+              }
+            />
+            <Route
+              path="/header"
+              element={
+                <>
+                  <Header />
+                </>
+              }
+            />
+            <Route
+              path="/sidebar"
+              element={
+                <>
+                  <Sidebar />
+                </>
+              }
+            />
+            <Route
+              path="/table"
+              element={
+                <>
+                  <Table />
+                </>
+              }
+            />
           </Routes>
         </Router>
-        <div>
-          <MainContent />
-        </div>
       </div>
     </>
   );

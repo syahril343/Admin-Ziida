@@ -1,7 +1,6 @@
-import React, { useState } from "react";
 import { FaRegUserCircle } from "react-icons/fa";
 import Pagination from "react-bootstrap/Pagination";
-import Alert from "../Button/Alert";
+import Alert from "../../../components/UiComponents/Alert";
 
 const initialData = [
   {

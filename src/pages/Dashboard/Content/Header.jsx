@@ -1,4 +1,3 @@
-import React from "react";
 import { HiMenu, HiUserCircle } from "react-icons/hi"; // Menggunakan react-icons
 
 const Header = ({ toggleSidebar }) => {

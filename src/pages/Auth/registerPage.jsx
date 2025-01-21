@@ -1,5 +1,5 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
+
 
 // icons
 import { FaGoogle } from "react-icons/fa";
@@ -7,14 +7,15 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
+import { FaUser } from "react-icons/fa";
 
-const loginPage = () => {
+const RegisterPage = () => {
+  // fungsi button ke login
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/register");
+    navigate("/");
   };
-  
 
   return (
     <div className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center min-h-screen bg-white">
@@ -26,10 +27,11 @@ const loginPage = () => {
           </div>
           <div className="py-10">
             <h2 className="font-semibold text-3xl text-primary">
-              Sign in to Account
+              Sign Up to Account
             </h2>
             <div className="border-2 w-10 border-primary inline-block mb-2"></div>
           </div>
+
           {/* icons sections */}
           <div className="flex justify-center gap-3 my-[-20px] text-lg">
             <a
@@ -51,12 +53,21 @@ const loginPage = () => {
               <FaLinkedinIn />
             </a>
           </div>
-          {/* icons sections */}
+
           <p className="my-10 text-[12px] text-slate-500">
             or use your email account:
           </p>
           <div className="flex flex-col items-center">
-            <div className="bg-gray-100 w-64 p-2 items-center flex mb-3">
+            <div className="bg-gray-100 w-64 p-2 items-center flex mb-3 rounded-xl">
+              <FaUser className="text-gray-400 mr-2" />
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                className="w-64 bg-slate-100 outline-none"
+              />
+            </div>
+            <div className="bg-gray-100 w-64 p-2 items-center flex mb-3 rounded-xl">
               <FaEnvelope className="text-gray-400 mr-2" />
               <input
                 type="email"
@@ -65,7 +76,7 @@ const loginPage = () => {
                 className="w-64 bg-slate-100 outline-none"
               />
             </div>
-            <div className="bg-gray-100 w-64 p-2 items-center flex mb-3">
+            <div className="bg-gray-100 w-64 p-2 items-center flex mb-3 rounded-xl">
               <RiLockPasswordFill className="text-gray-400 mr-2" />
               <input
                 type="password"
@@ -82,10 +93,12 @@ const loginPage = () => {
                 Forgot Password?
               </a>
             </div>
-            <a href="/sidebar"
+            <a
+              onClick={handleNavigate}
+              href=""
               className="mb-12 mt-3 border-2 text-primary border-primary rounded-full px-12 py-2 inline-block hover:bg-primary hover:text-white transition-all font-semibold"
             >
-              Sign in
+              Sign Up
             </a>
           </div>
         </div>
@@ -98,13 +111,14 @@ const loginPage = () => {
           <p className="mb-10 px-7 sm:hidden lg:block">
             Fill up personal information and start journey with us.
           </p>
-
-          <button
-            onClick={handleNavigate}
-            className="md:align-text-top  border-2 border-white rounded-full px-12 py-2 inline-block hover:bg-white hover:text-primary transition-all font-semibold"
-          >
-            Sign Up
-          </button>
+        
+            <button
+              onClick={handleNavigate}
+              className="md:align-text-top  border-2 border-white rounded-full px-12 py-2 inline-block hover:bg-white hover:text-primary transition-all font-semibold"
+            >
+              Sign in
+            </button>
+   
         </div>
       </div>
 
@@ -113,4 +127,4 @@ const loginPage = () => {
   );
 };
 
-export default loginPage;
+export default RegisterPage;

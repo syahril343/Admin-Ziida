@@ -1,4 +1,3 @@
-import React from "react";
 
 const TablePagination = ({ totalRows, rowsPerPage, currentPage, setCurrentPage }) => {
   const totalPages = Math.ceil(totalRows / rowsPerPage);

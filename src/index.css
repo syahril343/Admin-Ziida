@@ -12,7 +12,7 @@ body {
 
 .sidebar {
 
-    position: absolute;
+    position: fixed;
 }
 
 .myTabel {

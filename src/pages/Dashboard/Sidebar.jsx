@@ -1,7 +1,5 @@
-import React from "react";
 import { RxDashboard } from "react-icons/rx";
 import { TbLogout } from "react-icons/tb";
-import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -35,7 +33,7 @@ const Sidebar = () => {
           </div>
         </a>
 
-        <a href="/login">
+        <a href="/">
           <div className="flex items-center my-64 p-2 ml-4 rounded-md rounded-tr-none rounded-br-noney gap-3">
             <div className="text-lg">
               <TbLogout />

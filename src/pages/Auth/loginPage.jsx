@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 // icons
@@ -7,13 +6,12 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { FaUser } from "react-icons/fa";
 
-const registerPage = () => {
+const LoginPage = () => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/login");
+    navigate("/register");
   };
 
   return (
@@ -26,7 +24,7 @@ const registerPage = () => {
           </div>
           <div className="py-10">
             <h2 className="font-semibold text-3xl text-primary">
-              Sign Up to Account
+              Sign in to Account
             </h2>
             <div className="border-2 w-10 border-primary inline-block mb-2"></div>
           </div>
@@ -55,49 +53,45 @@ const registerPage = () => {
           <p className="my-10 text-[12px] text-slate-500">
             or use your email account:
           </p>
-          <div className="flex flex-col items-center">
-            <div className="bg-gray-100 w-64 p-2 items-center flex mb-3">
-              <FaUser className="text-gray-400 mr-2" />
-              <input
-                type="text"
-                name="username"
-                placeholder="Username"
-                className="w-64 bg-slate-100 outline-none"
-              />
-            </div>
-            <div className="bg-gray-100 w-64 p-2 items-center flex mb-3">
-              <FaEnvelope className="text-gray-400 mr-2" />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                className="w-64 bg-slate-100 outline-none"
-              />
-            </div>
-            <div className="bg-gray-100 w-64 p-2 items-center flex mb-3">
-              <RiLockPasswordFill className="text-gray-400 mr-2" />
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                className="w-64 bg-slate-100 outline-none"
-              />
-            </div>
-            <div className="justify-between flex w-64 mb-5 text-xs text-gray-400">
-              <label htmlFor="">
-                <input type="checkbox" name="Remember" id="" /> Remember me
-              </label>
-              <a href="#" className="text-primary">
-                Forgot Password?
+
+          {/* Form input Login Start */}
+          <form action="">
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-100 w-64 p-2 items-center flex mb-3 rounded-xl">
+                <FaEnvelope className="text-gray-400 mr-2" />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  className="w-64 bg-slate-100 outline-none"
+                />
+              </div>
+              <div className="bg-gray-100 w-64 p-2 items-center flex mb-3 rounded-xl">
+                <RiLockPasswordFill className="text-gray-400 mr-2" />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  className="w-64 bg-slate-100 outline-none"
+                />
+              </div>
+              <div className="justify-between flex w-64 mb-5 text-xs text-gray-400">
+                <label htmlFor="">
+                  <input type="checkbox" name="Remember" id="" /> Remember me
+                </label>
+                <a href="#" className="text-primary">
+                  Forgot Password?
+                </a>
+              </div>
+              <a
+                href="/table"
+                className="mb-12 mt-3 border-2 text-primary border-primary rounded-full px-12 py-2 inline-block hover:bg-primary hover:text-white transition-all font-semibold"
+              >
+                Sign in
               </a>
             </div>
-            <a onClick={handleNavigate}
-              href=""
-              className="mb-12 mt-3 border-2 text-primary border-primary rounded-full px-12 py-2 inline-block hover:bg-primary hover:text-white transition-all font-semibold"
-            >
-              Sign Up
-            </a>
-          </div>
+          </form>
+          {/* Form input Login Finish */}
         </div>
 
         <div className="bg-gradient-to-br from-primary to-secondary w-2/5 text-white rounded-tr-2xl rounded-br-2xl py-36 PX-12">
@@ -111,16 +105,15 @@ const registerPage = () => {
 
           <button
             onClick={handleNavigate}
+            to="/"
             className="md:align-text-top  border-2 border-white rounded-full px-12 py-2 inline-block hover:bg-white hover:text-primary transition-all font-semibold"
           >
-            Sign in
+            Sign Up
           </button>
         </div>
       </div>
-
-      {/* Register Section  */}
     </div>
   );
 };
 
-export default registerPage;
+export default LoginPage;

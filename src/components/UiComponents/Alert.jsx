@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 
 const Alert = ({ message, type, onClose, duration = 3000 }) => {
   const alertTypes = {
