@@ -84,7 +84,7 @@ const LoginPage = () => {
                 </a>
               </div>
               <a
-                href="/table"
+                href="/dashboard"
                 className="mb-12 mt-3 border-2 text-primary border-primary rounded-full px-12 py-2 inline-block hover:bg-primary hover:text-white transition-all font-semibold"
               >
                 Sign in

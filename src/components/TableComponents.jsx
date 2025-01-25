@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import { FaRegUserCircle } from "react-icons/fa";
 import Pagination from "react-bootstrap/Pagination";
-import Alert from "../Button/Alert";
+import Alert from "./UiComponents/Alert";
+import { useState } from "react";
 
 const initialData = [
   {
@@ -184,7 +184,7 @@ const App = () => {
         <h1 className="text-3xl font-bold mb-4">Admin Ziida</h1>
         <div className="mr-7 flex items-center gap-2">
           <FaRegUserCircle className="text-xl" />
-          <span>I'm Ziida</span>
+          <span>Im Ziida</span>
         </div>
       </div>
 

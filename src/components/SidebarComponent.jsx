@@ -1,7 +1,8 @@
-import React from "react";
 import { RxDashboard } from "react-icons/rx";
 import { TbLogout } from "react-icons/tb";
-import { useNavigate } from "react-router-dom";
+import { FaUsersGear } from "react-icons/fa6";
+import { IoSettingsSharp } from "react-icons/io5";
+import { MdFeedback } from "react-icons/md";
 
 const Sidebar = () => {
   return (
@@ -21,21 +22,29 @@ const Sidebar = () => {
         <a href="">
           <div className="flex items-center p-2 ml-4 hover:bg-white rounded-md rounded-tr-none rounded-br-none hover:text-primary gap-3">
             <div className="text-lg">
-              <RxDashboard />
+            <FaUsersGear />
             </div>
-            <li className="font-semibold">Dashboard</li>
+            <li className="font-semibold">Leads</li>
           </div>
         </a>
         <a href="">
           <div className="flex items-center p-2 ml-4 hover:bg-white rounded-md rounded-tr-none rounded-br-none hover:text-primary gap-3">
             <div className="text-lg">
-              <RxDashboard />
+            <IoSettingsSharp />
             </div>
-            <li className="font-semibold">Dashboard</li>
+            <li className="font-semibold">Setting</li>
+          </div>
+        </a>
+        <a href="">
+          <div className="flex items-center p-2 ml-4 hover:bg-white rounded-md rounded-tr-none rounded-br-none hover:text-primary gap-3">
+            <div className="text-lg">
+            <MdFeedback />
+            </div>
+            <li className="font-semibold">Feedback</li>
           </div>
         </a>
 
-        <a href="/login">
+        <a href="/">
           <div className="flex items-center my-64 p-2 ml-4 rounded-md rounded-tr-none rounded-br-noney gap-3">
             <div className="text-lg">
               <TbLogout />

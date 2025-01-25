@@ -2,9 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Login from "./pages/Auth/loginPage";
 import Register from "./pages/Auth/registerPage";
-import Header from "./pages/Dashboard/Content/Header";
-import Sidebar from "./pages/Dashboard/Sidebar";
-import Table from "./pages/Dashboard/Content/Table";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 const App = () => {
   return (
@@ -29,26 +27,10 @@ const App = () => {
               }
             />
             <Route
-              path="/header"
+              path="/dashboard"
               element={
                 <>
-                  <Header />
-                </>
-              }
-            />
-            <Route
-              path="/sidebar"
-              element={
-                <>
-                  <Sidebar />
-                </>
-              }
-            />
-            <Route
-              path="/table"
-              element={
-                <>
-                  <Table />
+                  <Dashboard />
                 </>
               }
             />
