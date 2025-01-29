@@ -9,6 +9,7 @@ export default {
       colors : {
         primary : "#29A648",
         secondary : "#008642",
+        hoverBtn : "#19A648",
       }
     },
   },

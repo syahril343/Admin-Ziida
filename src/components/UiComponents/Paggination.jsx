@@ -1,31 +1,27 @@
+import Pagination from "react-bootstrap/Pagination";
 
-const TablePagination = ({ totalRows, rowsPerPage, currentPage, setCurrentPage }) => {
-  const totalPages = Math.ceil(totalRows / rowsPerPage);
-
-  const handleClick = (page) => {
-    setCurrentPage(page);
-  };
-
+function AdvancedExample() {
   return (
-    <div style={{ marginTop: "20px" }}>
-      {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
-        <button
-          key={page}
-          onClick={() => handleClick(page)}
-          style={{
-            margin: "0 5px",
-            padding: "5px 10px",
-            backgroundColor: currentPage === page ? "blue" : "white",
-            color: currentPage === page ? "white" : "black",
-            border: "1px solid #ccc",
-            cursor: "pointer",
-          }}
-        >
-          {page}
-        </button>
-      ))}
+    <div className="bg-lime-100 p-4">
+      <Pagination className=" ml-[20rem] flex gap-2 border px-2 py-1">
+        <Pagination.First />
+        <Pagination.Prev />
+        <Pagination.Item>{1}</Pagination.Item>
+        <Pagination.Ellipsis />
+
+        <Pagination.Item>{10}</Pagination.Item>
+        <Pagination.Item>{11}</Pagination.Item>
+        <Pagination.Item active>{12}</Pagination.Item>
+        <Pagination.Item>{13}</Pagination.Item>
+        <Pagination.Item disabled>{14}</Pagination.Item>
+
+        <Pagination.Ellipsis />
+        <Pagination.Item>{20}</Pagination.Item>
+        <Pagination.Next />
+        <Pagination.Last />
+      </Pagination>
     </div>
   );
-};
+}
 
-export default TablePagination;
+export default AdvancedExample;

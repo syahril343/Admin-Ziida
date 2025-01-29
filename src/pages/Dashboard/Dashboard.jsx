@@ -1,5 +1,8 @@
 import Sidebar from "../../components/SidebarComponent";
-import Table from "../../components/TableComponents";
+import Header from "../../components/HeaderComponent";
+import SearchBar from "../../components/SearchBarComponent";
+import Table from "../../components/TableComponent";
+// import Paggination from "../../components/UiComponents/Paggination";
 
 const Dashboard = () => {
   return (
@@ -8,7 +11,14 @@ const Dashboard = () => {
         <Sidebar />
       </div>
       <div>
-        <Table />
+        <Header />
+      </div>
+      <div className="">
+        <SearchBar />
+        <div>
+          <Table />
+          {/* <Paggination /> */}
+        </div>
       </div>
     </div>
   );
