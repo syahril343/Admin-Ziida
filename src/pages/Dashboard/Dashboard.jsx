@@ -1,8 +1,8 @@
 import Sidebar from "../../components/SidebarComponent";
 import Header from "../../components/HeaderComponent";
-import SearchBar from "../../components/SearchBarComponent";
-import Table from "../../components/TableComponent";
-// import Paggination from "../../components/UiComponents/Paggination";
+// import SearchBar from "../../components/SearchBarComponent";
+import CobaTabelComponent from "../../components/CobaTabelComponent";
+
 
 const Dashboard = () => {
   return (
@@ -13,12 +13,9 @@ const Dashboard = () => {
       <div>
         <Header />
       </div>
-      <div className="">
-        <SearchBar />
-        <div>
-          <Table />
-          {/* <Paggination /> */}
-        </div>
+      <div>
+        {/* <SearchBar /> */}
+        <CobaTabelComponent />
       </div>
     </div>
   );
